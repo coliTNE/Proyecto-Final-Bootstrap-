@@ -41,7 +41,7 @@ img {
 .main__div--flex {
     flex-direction: column;
     align-items: center;
-}   
+}
 
 .spanGold {
     color: var(--darkGold);
@@ -51,6 +51,7 @@ img {
     background-color: var(--lightgray);
     border-bottom: 3px solid var(--darkGold);
     opacity: .95;
+    z-index: 998;
 }
 
 .nav__barDevice {
@@ -137,7 +138,7 @@ img {
 
 
 .main__section {
-    margin-top: 94px;
+    padding-top: 94px;
     background-color: black;
     color: var(--white);
     line-height: 1.6;
@@ -187,6 +188,7 @@ img {
 .musculosas__section {
     border-top: 3px solid var(--darkest);
     height: 100vh;
+    padding-left: 50px;
 }
 
 .musculosas__section--goldenState {
@@ -220,6 +222,7 @@ img {
 .musculosas__logo {
     text-align: center;
     padding-top: 4em;
+    min-width: 100px;
 }
 
 .musculosas__logoImg {
@@ -231,8 +234,8 @@ img {
 }
 
 .musculosas__card {
-    width: 390px;
-    height: 450px;
+    width: 300px;
+    height: 360px;
     padding: 2rem 1rem;
     position: relative;
     background-color: #fff;
@@ -316,6 +319,84 @@ img {
     box-shadow: 2px 7px 10px rgba(41, 41, 41, 0.8);
 }
 
+
+/* Sidebar */
+
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: var(--lightgray);
+    z-index: 999;
+    border-right: var(--gold) solid 3px;
+} 
+
+.sidebar__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidebar__logo {
+    width: 50px;
+    padding-top: 1em;
+}
+
+.sidebar__list {
+    list-style: none;
+    font-size: 1.625rem;
+    margin-top: 1.5em;
+    display: flex;
+    width: 50px;
+    overflow-x: hidden;
+    flex-direction: column;
+    gap: 1em;
+    transition: all ease-out .5s;
+    padding: 0;
+}
+
+.sidebar:hover .sidebar__list {
+    width: 200px;
+}
+
+.sidebar__item {
+    padding: 0 .5em;
+    opacity: 0;
+}
+
+.sidebar:hover .sidebar__item {
+    width: 200px;
+    opacity: 1;
+    transition: all ease .6s;
+}
+
+.sidebar__link {
+    text-decoration: none;
+    color: var(--darkest) !important;
+}
+
+.sidebar__item::after {
+    content: "";
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    height: 2px;
+    background: var(--gold);
+    transform: scale(0, 1);
+    transition: all ease-out .4s;
+    transform-origin: left;
+    top: 0;
+}
+
+.sidebar__item:hover::after {
+    transform: scale(1, 1);
+}
+
+
+
+
 @media (min-width: 1000px) {
 
     .nav__barDevice {
@@ -332,5 +413,16 @@ img {
 
     .vh-100 {
         height: 100vh !important;
+        overflow-y: hidden;
     }
+
+    .musculosas__section {
+        padding: 45px;
+        padding-left: unset;
+    }
+
+    .musculosas__card {
+        width: 390px;
+        height: 450px;
+    }    
 }
