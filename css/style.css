@@ -342,6 +342,7 @@ img {
 .sidebar__logo {
     width: 50px;
     padding-top: 1em;
+    cursor: pointer;
 }
 
 .sidebar__list {
