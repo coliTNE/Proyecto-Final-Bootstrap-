@@ -55,32 +55,80 @@ img {
     color: var(--darkGold);
 }
 
-.navbar {
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: .6s ease-out;
+    padding: 40px 150px;
+    z-index: 999 !important;    
+}
+
+header.sticky {
+
+    padding: 10px 225px;
     background-color: var(--lightgray);
-    border-bottom: 3px solid var(--gold);
-    opacity: .95;
-    z-index: 998;
+    border-bottom: 3px solid var(--darkGold);
 }
 
-.nav__barDevice {
-    border-radius: 500px;
-    background-color: var(--gold);
+header .nav__logo {
+    position: relative;
+    text-decoration: none;
+    transition: .6s ease-out;
 }
 
-.nav__barComputer {
-    display: none !important;
-    list-style: none;
-    font-size: 1.325rem;
+header .nav__logo .nav__img {
+    position: relative;
+}
+
+header .nav__logo .nav__img--gray {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: .6s ease-out;
+}
+
+header.sticky .nav__logo .nav__img--gray {
+    opacity: 1;
+
+}
+
+header ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 0;
 }
 
-.nav__item {
-    padding: 1em;
+header ul li {
+    position: relative;
+    list-style: none;
+}
+
+header ul li a {
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: var(--white) !important;
+    letter-spacing: 2px;
+    transition: .6s ease-out;
+    font-size: 1.125rem;
+}
+
+header.sticky ul li a {
+    color: var(--darkest) !important;
+
 }
 
 .nav__item::after {
     content: "";
-    width: 90%;
+    width: 50%;
     display: block;
     margin: 0 auto;
     height: 2px;
@@ -116,12 +164,6 @@ img {
 
 .nav__item--button::after {
     content: none;
-}
-
-.nav__link  {
-    text-decoration: none;
-    color: black !important;
-    position: relative;
 }
 
 .footer {
@@ -186,13 +228,13 @@ img {
 
 /* Css Musculosas */
 
+
 .vh-100 {
     height: unset !important;
 }
 
 .musculosas__section {
     border-top: 3px solid var(--darkest);
-    height: 100vh;
     padding-left: 50px;
 }
 
@@ -336,6 +378,15 @@ img {
     background-color: var(--lightgray);
     z-index: 999;
     border-right: var(--gold) solid 3px;
+    transform-origin: left;
+    transform: scale(0, 1);
+    transition: .6s ease-out;
+} 
+
+
+.sidebar.sticky {
+
+    transform: scale(1, 1);
 } 
 
 .sidebar__row {
