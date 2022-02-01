@@ -60,17 +60,17 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    display: flex;
+    display: block;
     justify-content: space-between;
     align-items: center;
     transition: .6s ease-out;
-    padding: 40px 150px;
+    padding: 40px 50px;
     z-index: 999 !important;    
 }
 
 header.sticky {
 
-    padding: 10px 225px;
+    padding: 10px 100px;
     background-color: var(--lightgray);
     border-bottom: 3px solid var(--darkGold);
 }
@@ -79,6 +79,7 @@ header .nav__logo {
     position: relative;
     text-decoration: none;
     transition: .6s ease-out;
+    display: none;
 }
 
 header .nav__logo .nav__img {
@@ -104,6 +105,7 @@ header ul {
     justify-content: center;
     align-items: center;
     margin: 0;
+    padding: 0;
 }
 
 header ul li {
@@ -118,7 +120,7 @@ header ul li a {
     color: var(--white) !important;
     letter-spacing: 2px;
     transition: .6s ease-out;
-    font-size: 1.125rem;
+    font-size: 0.8rem;
 }
 
 header.sticky ul li a {
@@ -381,6 +383,7 @@ header.sticky ul li a {
     transform-origin: left;
     transform: scale(0, 1);
     transition: .6s ease-out;
+    display: none;
 } 
 
 
@@ -541,6 +544,11 @@ textarea{
     overflow-y: scroll;
 }
 
+.contact__btns {
+    display: flex;
+    gap: 1em;
+}
+
 .contact__btn{
 	width: 100%;
 	padding: 0.5rem 1rem;
@@ -551,6 +559,10 @@ textarea{
 	outline: none;
 	cursor: pointer;
 	transition: .3s;
+}
+
+.contact__btn--rst {
+    opacity: .85;
 }
 
 .contact__btn:hover{
@@ -568,12 +580,21 @@ textarea{
 
 @media (min-width: 1000px) {
 
-    .nav__barDevice {
-        display: none !important;
+    header {
+        padding: 40px 150px;
+        display: flex;
+    }
+    
+    header.sticky { 
+        padding: 10px 225px;
     }
 
-    .nav__barComputer {
-        display: flex !important;
+    header .nav__logo {
+        display: block;
+    }
+
+    header ul li a {
+        font-size: 1.125rem;
     }
 
     .main__div--flex {
@@ -595,6 +616,10 @@ textarea{
         height: 450px;
     }    
 
+    .sidebar {
+        display: block;
+    }
+
     .contact__box{
         grid-template-columns: repeat(2, 1fr);
     }
@@ -602,4 +627,5 @@ textarea{
     .contact__left{
         height: 100%;
     }
+
 }
