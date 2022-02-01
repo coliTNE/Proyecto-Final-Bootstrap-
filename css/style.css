@@ -65,7 +65,7 @@ header {
     align-items: center;
     transition: .6s ease-out;
     padding: 40px 60px;
-    z-index: 999 !important;    
+    z-index: 999 !important;
 }
 
 header.sticky {
@@ -104,8 +104,9 @@ header ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0;
+    margin: 0 5px;
     padding: 0;
+
 }
 
 header ul li {
@@ -270,9 +271,9 @@ header.sticky ul li a {
 .musculosas__logo {
     text-align: center;
     padding-top: 4em;
-    min-width: 100px;
     margin: 0 auto;
-    max-width: 300px;
+    min-width: 100px;
+    max-width: 150px;
 }
 
  .musculosas__logoImg {
@@ -619,6 +620,10 @@ textarea{
 
     .musculosas__box {
         padding-top: 8em;
+    }
+
+    .musculosas__logo {
+        max-width: 300px;
     }
 
     .sidebar {
