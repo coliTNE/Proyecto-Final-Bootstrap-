@@ -64,7 +64,7 @@ header {
     justify-content: space-between;
     align-items: center;
     transition: .6s ease-out;
-    padding: 40px 50px;
+    padding: 40px 60px;
     z-index: 999 !important;    
 }
 
@@ -237,7 +237,6 @@ header.sticky ul li a {
 
 .musculosas__section {
     border-top: 3px solid var(--darkest);
-    padding-left: 50px;
 }
 
 .musculosas__section--goldenState {
