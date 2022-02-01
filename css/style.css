@@ -271,14 +271,16 @@ header.sticky ul li a {
     text-align: center;
     padding-top: 4em;
     min-width: 100px;
+    margin: 0 auto;
+    max-width: 300px;
 }
 
-.musculosas__logoImg {
-    width: 15%;
-}
+ .musculosas__logoImg {
+    width: 100%;
+} 
 
 .musculosas__box {
-    padding-top: 8em;
+    padding-top: 2em;
 }
 
 .musculosas__card {
@@ -614,6 +616,10 @@ textarea{
         width: 390px;
         height: 450px;
     }    
+
+    .musculosas__box {
+        padding-top: 8em;
+    }
 
     .sidebar {
         display: block;
