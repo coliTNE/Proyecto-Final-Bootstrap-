@@ -116,12 +116,12 @@ header ul li {
 
 header ul li a {
     position: relative;
-    margin: 0 15px;
+    margin: 0 1em;
     text-decoration: none;
     color: var(--white) !important;
     letter-spacing: 2px;
     transition: .6s ease-out;
-    font-size: 0.8rem;
+    font-size: calc(.5rem + .5vw);
 }
 
 header.sticky ul li a {
@@ -612,7 +612,7 @@ textarea{
     }
 
     header ul li a {
-        font-size: 1.125rem;
+        font-size: calc(.7rem + .5vw);
     }
 
     .main__div--flex {
